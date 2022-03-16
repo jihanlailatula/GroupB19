@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-image: url("img/allpets.webp");
+  padding: 30px;
+  text-align: center;
+  height: 285px;
+  font-size: 35px;
+}
+.header img{
+  object-fit: cover;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  width: 33.3%;
+}
+.column.side.right{
+  background-image: url("img/dog.jpg");
+  background-position: center;
+}
+.column.side.left{
+  background-image: url("img/turtle.jpg");
+  background-position: center;
+}
+/* Middle column */
+.column.middle {
+  width: 33.3%;
+  background-position: center;
+  background-image: url("img/cat.jpg");
+}
+.button{
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  /* margin: 2px 2px; */
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #cacaca;
+  color: black;
+}
+.input{
+  margin-top: 100px;
+}
+.input .submit{
+  background-color: orange;
+  border: 100px black;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  /* margin: 2px 2px; */
+  cursor: pointer;
+}
+.input .submit:hover{
+  background-color: rgb(201, 98, 15);
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: skyblue;
+    margin-top: 15px;
+    padding-top: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
